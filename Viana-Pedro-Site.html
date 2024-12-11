@@ -6,9 +6,27 @@
     <title>Pedro Viana - Personal Website</title>
 </html>
 <body class="grid-container">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(document).ready(function () {
+        // Append the glowing circle to the body
+        $("body").append('<div class="cursor-follower"></div>');
+
+        // Update circle position on mousemove
+        $(document).mousemove(function (e) {
+            $(".cursor-follower").css({
+                top: e.clientY + "px",
+                left: e.clientX + "px"
+            });
+        });
+    });
+    </script>
+
+
     <section class="leftContent">
         <header class="header-content">
-            <h1>Pedro Viana</h1>
+            <h1>Pedro Viana <span class="wave">👋</span></h1>
             <h2>Software Developer</h2>
             <p>Hello World!</p>
             <nav class="nav-content">
