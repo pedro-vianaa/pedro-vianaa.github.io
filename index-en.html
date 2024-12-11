@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="portfolio.css">
+
+    <!-- Pin Icon import -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Font Import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Mysuru:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>Pedro Viana - Personal Website</title>
+</html>
+<body class="grid-container">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(document).ready(function () {
+        // Append the glowing circle to the body
+        $("body").append('<div class="cursor-follower"></div>');
+
+        // Update circle position on mousemove
+        $(document).mousemove(function (e) {
+            $(".cursor-follower").css({
+                top: e.clientY + "px",
+                left: e.clientX + "px"
+            });
+        });
+    });
+    </script>
+
+
+    <section class="leftContent">
+
+        <header class="header-content">
+
+            <div class="title">
+                <h1>Pedro Viana <span class="wave">👋</span></h1>
+                <h2>Software Developer</h2>
+                <h3><i class="fa fa-map-marker" style="font-size:24px"></i> Wilmington, NC</h3>
+            </div>
+
+            <div class="description">
+                <p>Senior in college with a passion for programming and design, eager to learn and explore new opportunities and to develop new skills.</p>
+            </div>
+
+            <body class="grid-container">
+
+                <table class="language-nav">
+                    <tr>
+                        <td>
+                            <a href="site-pt.html">Português</a>
+                        </td>
+                        <td>
+                            <a href="site-en.html">English</a>
+                        </td>
+                    </tr>
+                </table>
+            
+            </nav>
+            <nav class="nav-content">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#project">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+    </section>
+
+    <section class="rightContent">
+        <main class="main-content">
+            <section class="aboutDescription">
+                <h2 id="about">About</h2>
+                <p>Born in São Paulo, Brazil, I moved to the U.S. for college. Although I was unsure of what to pursue, I knew my passion for technology and design would be key when deciding on my major.</p>
+                <p>After 4 years of Computer Science, my passion for technology has merged with my interest in design, allowing me to transform my ideas from simply ideas to visual and detailed programs and websites.</p>
+                <p>During my time in college, I was introduced to a variety of coding languages, such as Python, Java, HTML, CSS, MySQL, PHP, and more.</p>
+            </section>
+
+            <section class="projectDescription">
+                <h2 id="project">Projects</h2>
+                <p>Below are a couple of those projects that I created and assisted: </p>
+                <p><a href="https://student.uncw.edu/pnv4736/PedroViana-MIS310/MiniProject4/project4.html">Website about typical dishes in Brazil</a> Using HTML and CSS</p>
+                <p><a href="https://ada.cis.uncw.edu/~pnv4736/DogDayCare.html">Dog Daycare Database</a> Using PHP, MySQL and HTML</p>
+                <p><a href="https://github.com/CharlesDeda/PegSolitaireGames">Peg Solitaire Game</a> Using Java, and a Java GUI</p>
+            </section>
+
+            <section class="experienceDescription">
+                <h2 id="experience">Experience</h2>
+            </section>
+
+        </main>
+
+    </section>
+
+</body>
