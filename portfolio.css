@@ -5,15 +5,15 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
     background: linear-gradient(to bottom, #2a2a2a, #1a1a1a); 
     color: white;
+    font-family: Funnel Sans, sans-serif;
 }
   
 .grid-container {
     display: grid;
     grid-template-columns: 2fr 2fr;
-    padding: 4rem;
+    padding: 4rem 20rem;
     gap: 2rem;
     height: 100vh; /* Full viewport height */
     align-items: center; /* Center content vertically */
@@ -54,15 +54,16 @@ body {
 
 .nav-content a {
     text-decoration: none;
-    color: white;
+    color: rgba(255, 255, 255, 0.37);
     font-size: 1.2rem;
-    padding: 0.5rem 1rem; /* Adds padding around the text */
-    display: inline-block; /* Ensures padding applies correctly */
+    padding: 0.5rem 1rem;
+    display: inline-block;
 }
 
 .nav-content a:hover {
-    font-size: 1.5rem; /* Keeps hover effect for emphasis */
-    transition: font-size 0.3s; /* Smooth transition for hover effect */
+    font-size: 1.5rem;
+    transition: font-size 0.3s;
+    color: rgb(255, 255, 255);
 }
 
 .header-content h1 {
@@ -129,8 +130,43 @@ body {
     transition: none; /* Instant movement */
 }
 
-.nav-content:hover + .cursor-follower {
-    box-shadow: 0 0 70px rgba(255, 255, 0, 1), /* Stronger yellow glow */
-                0 0 150px rgba(255, 255, 0, 0.5); /* Larger outer glow for dramatic effect */
-    background: rgba(255, 255, 0, 0.3); /* Stronger yellow center */
+.title{
+    font-family: Geist Mono, sans-serif;
+}
+
+p{
+    font-family: Hind Mysuru, sans-serif;
+    color: rgba(255, 255, 255, 0.37);
+}
+
+.language-nav {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #333;
+    border-radius: 5px;
+    z-index: 999;
+    border: 1px solid #555; 
+}
+
+.language-nav td {
+    padding: 5px 10px;
+}
+
+.language-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.language-nav a:hover {
+    color: yellow;
+    transition: color 0.3s ease-in-out;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding-left: 0.5rem;
+    display: inline-block;
 }
