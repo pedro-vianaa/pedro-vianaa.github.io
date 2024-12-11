@@ -5,7 +5,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #2a2a2a, #1a1a1a); 
+    background-color: #2a2a2a; 
     color: white;
     font-family: Funnel Sans, sans-serif;
 }
@@ -106,6 +106,7 @@ body {
     animation: wave-hand 0.6s ease-in-out;
 }
 
+
 @keyframes wave-hand {
     0% { transform: rotate(0deg); }
     20% { transform: rotate(15deg); }
@@ -173,4 +174,128 @@ a{
 
 footer{
     font-size: 0.75rem;
+}
+
+/* For screens with a max-width of 780px, remove the glow effect */
+@media (max-width: 780px) {
+    .cursor-follower {
+        display: none; /* Hide the glowing cursor effect */
+    }
+}
+
+/* Optimize grid and padding for smaller screens */
+@media (max-width: 780px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column layout for small screens */
+        padding: 1rem; /* Reduce padding */
+    }
+
+    .leftContent, .rightContent {
+        align-self: center; /* Adjust alignment */
+        margin: 0 auto; /* Center content */
+    }
+
+    .header-content h1 {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+
+    .header-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .header-content h3 {
+        font-size: 1rem;
+    }
+
+    .main-content h2 {
+        font-size: 1.2rem;
+    }
+
+    .main-content p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Further enhancements for extremely small devices */
+@media (max-width: 480px) {
+    .nav-content {
+        position: static; /* Adjust position for smaller screens */
+        margin: 0.5rem 0; /* Add margin */
+    }
+
+    .language-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .language-nav td {
+        padding: 0.3rem;
+    }
+}
+
+/* Adjust nav bar and spacing for phone-sized screens */
+@media (max-width: 780px) {
+    .nav-content {
+        position: relative; /* Keep the nav in flow */
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center the navigation horizontally */
+        padding: 1rem; /* Add padding */
+        margin-top: 1rem; /* Space above the nav bar */
+        margin-bottom: 2rem; /* Space below the nav bar */
+        background-color: #1a1a1a; /* Optional: Background for contrast */
+        border-radius: 0.5rem; /* Rounded corners */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+        z-index: 10; /* Ensure layering */
+    }
+
+    .nav-content ul {
+        flex-direction: row; /* Horizontal layout */
+        gap: 1rem; /* Spacing between items */
+        padding: 0; /* Reset padding */
+        margin: 0; /* Reset margin */
+    }
+
+    .nav-content ul li {
+        margin: 0; /* Remove default margin */
+    }
+
+    .nav-content a {
+        padding: 0.5rem 1rem; /* Adjust padding for links */
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    /* Adjust header-content spacing */
+    .header-content {
+        margin-top: 2rem; /* Ensure space above title */
+        margin-bottom: 3rem; /* Space below title */
+        text-align: center; /* Center-align title */
+    }
+
+    .header-content h1 {
+        font-size: 2rem; /* Responsive font size */
+    }
+
+    .header-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .header-content h3 {
+        font-size: 1rem; /* Adjust location text */
+        margin-bottom: 1.5rem; /* Space below location */
+    }
+
+    /* Adjust paragraph spacing below the header */
+    .description p {
+        margin-top: 2rem; /* Space above paragraph */
+        font-size: 0.95rem; /* Smaller font size for smaller screens */
+        line-height: 1.5; /* Improved readability */
+    }
+}
+
+img {
+    border-radius: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
