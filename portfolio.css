@@ -299,3 +299,8 @@ img {
     margin-left: auto;
     margin-right: auto;
 }
+
+.icons{
+    padding: 5px;
+    margin: 5px;
+}
