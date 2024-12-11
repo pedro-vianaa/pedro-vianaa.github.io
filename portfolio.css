@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -12,6 +16,15 @@ body {
     padding: 4rem;
     gap: 2rem;
     height: 100vh; /* Full viewport height */
+    align-items: center; /* Center content vertically */
+}
+
+.leftContent, .rightContent {
+    align-self: stretch; /* Ensure sections are of equal height */
+}
+
+.header-content h1, .header-content h2, .header-content p {
+    margin: 0; /* Adjust/remove margins for consistent alignment */
 }
   
 .header-content {
@@ -20,15 +33,38 @@ body {
     justify-content: space-between;
 }
 
-.header-content a {
-    text-decoration: none;
-    color: white;
+.nav-content {
+    position: fixed; /* Keeps the nav bar fixed while scrolling */
+    top: 50%; /* Positions it vertically in the middle of the screen */
+    left: 1rem; /* Ensures it retains its horizontal spacing */
+    transform: translateY(-50%); /* Centers it vertically relative to the screen */
+    padding: 1rem; /* Keeps the established padding */
+    border-radius: 0.5rem; /* Optional: Gives a rounded appearance */
 }
 
-.header-content a:hover {
-    font-size: 1.5rem;
+.nav-content ul {
+    list-style: none;
+    padding: 0; /* Keeps padding for the list structure intact */
+    margin: 0; /* Prevents the list from adding extra margin */
 }
-  
+
+.nav-content ul li {
+    margin: 1rem 0; /* Retains spacing between nav items */
+}
+
+.nav-content a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem; /* Adds padding around the text */
+    display: inline-block; /* Ensures padding applies correctly */
+}
+
+.nav-content a:hover {
+    font-size: 1.5rem; /* Keeps hover effect for emphasis */
+    transition: font-size 0.3s; /* Smooth transition for hover effect */
+}
+
 .header-content h1 {
     font-size: 3rem;
     font-weight: bold;
@@ -58,4 +94,43 @@ body {
     line-height: 1.6;
 }
   
-  
+.wave {
+    font-size: 3rem;
+    display: inline-block;
+    cursor: pointer;
+    transform-origin: bottom center; /* Set origin for rotation */
+}
+
+.wave:hover {
+    animation: wave-hand 0.6s ease-in-out;
+}
+
+@keyframes wave-hand {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(15deg); }
+    40% { transform: rotate(-15deg); }
+    60% { transform: rotate(15deg); }
+    80% { transform: rotate(-15deg); }
+    100% { transform: rotate(0deg); }
+}
+
+ /* https://dev.to/b4two/how-to-make-a-custom-cursor-with-css-and-jquery-5g3m  source for the mouse pointer (did some tweaks but the main gist was taken*/ 
+.cursor-follower {
+    position: fixed; /* Fixed position to follow cursor */
+    width: 25px; /* Increased size for a larger circle */
+    height: 25px;
+    background: rgba(255, 255, 0, 0.2); /* Slightly stronger yellow center */
+    border-radius: 50%; /* Circle shape */
+    pointer-events: none; /* Prevent interaction with the circle */
+    box-shadow: 0 0 50px rgba(255, 255, 0, 0.7), /* Stronger and larger yellow glow */
+                0 0 100px rgba(255, 255, 0, 0.4); /* Larger outer glow for a light effect */
+    z-index: 1000; /* Ensure it appears above other content */
+    transform: translate(-50%, -50%); /* Center circle on the cursor */
+    transition: none; /* Instant movement */
+}
+
+.nav-content:hover + .cursor-follower {
+    box-shadow: 0 0 70px rgba(255, 255, 0, 1), /* Stronger yellow glow */
+                0 0 150px rgba(255, 255, 0, 0.5); /* Larger outer glow for dramatic effect */
+    background: rgba(255, 255, 0, 0.3); /* Stronger yellow center */
+}
