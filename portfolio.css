@@ -34,22 +34,21 @@ body {
 }
 
 .nav-content {
-    position: fixed; /* Keeps the nav bar fixed while scrolling */
-    top: 50%; /* Positions it vertically in the middle of the screen */
-    left: 1rem; /* Ensures it retains its horizontal spacing */
-    transform: translateY(-50%); /* Centers it vertically relative to the screen */
-    padding: 1rem; /* Keeps the established padding */
-    border-radius: 0.5rem; /* Optional: Gives a rounded appearance */
+    position: fixed;
+    top: 50%; 
+    left: 1rem; 
+    transform: translateY(-50%); 
+    padding: 1rem;  
 }
 
 .nav-content ul {
     list-style: none;
-    padding: 0; /* Keeps padding for the list structure intact */
-    margin: 0; /* Prevents the list from adding extra margin */
+    padding: 0; 
+    margin: 0; 
 }
 
 .nav-content ul li {
-    margin: 1rem 0; /* Retains spacing between nav items */
+    margin: 1rem 0; 
 }
 
 .nav-content a {
@@ -99,7 +98,7 @@ body {
     font-size: 3rem;
     display: inline-block;
     cursor: pointer;
-    transform-origin: bottom center; /* Set origin for rotation */
+    transform-origin: bottom center; 
 }
 
 .wave:hover {
@@ -240,12 +239,11 @@ footer{
         position: relative; /* Keep the nav in flow */
         display: flex; /* Use flexbox for layout */
         justify-content: center; /* Center the navigation horizontally */
+        top: 100px;
         padding: 1rem; /* Add padding */
         margin-top: 1rem; /* Space above the nav bar */
         margin-bottom: 2rem; /* Space below the nav bar */
-        background-color: #1a1a1a; /* Optional: Background for contrast */
         border-radius: 0.5rem; /* Rounded corners */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
         z-index: 10; /* Ensure layering */
     }
 
@@ -285,7 +283,7 @@ footer{
         margin-bottom: 1.5rem; /* Space below location */
     }
 
-    /* Adjust paragraph spacing below the header */
+
     .description p {
         margin-top: 2rem; /* Space above paragraph */
         font-size: 0.95rem; /* Smaller font size for smaller screens */
@@ -293,7 +291,7 @@ footer{
     }
 }
 
-img {
+.title img{
     border-radius: 80%;
     display: block;
     margin-left: auto;
@@ -303,4 +301,8 @@ img {
 .icons{
     padding: 5px;
     margin: 5px;
+}
+
+img{
+    border-radius: 8px;
 }
